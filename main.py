@@ -18,7 +18,7 @@ screenWidth = root.winfo_screenwidth()
 screenHeight = root.winfo_screenheight()
 
 # Apply screensize calulations to the GUI
-appGeometry = ScreenSize(screenWidth, screenHeight)
+appGeometry = ScreenSize(screenWidth, screenHeight, 0.3, 0.9)
 root.geometry(appGeometry)
 
 root.configure(bg="Black")
