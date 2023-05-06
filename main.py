@@ -1,11 +1,13 @@
 # importing required modules
+import os
+import subprocess
+import time
 import tkinter as Tk
+import webbrowser
+from tkinter import ttk
+
 import customtkinter as CTk
 from win10toast import ToastNotifier
-import subprocess
-import webbrowser
-import time
-import os
 
 from screenSize import ScreenSize
 
