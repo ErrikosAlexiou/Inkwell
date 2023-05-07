@@ -1,4 +1,4 @@
-## Inkwell. The diary you didn't know you needed.
+## Inkwell. Your personal time capsule
 
 
 Development for the master diary entry application.
