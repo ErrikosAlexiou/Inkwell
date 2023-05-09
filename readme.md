@@ -1,16 +1,13 @@
-# inkwell
+# Inkwell. Your personal time capsule
 
-A new Flutter project.
+Thanks for checking out the Inkwell github page.
 
-## Getting Started
+This is the open repo for Inkwell development.
 
-This project is a starting point for a Flutter application.
+kindly, Errikos Alexiou
 
-A few resources to get you started if this is your first Flutter project:
+## Todo list:
+https://www.evernote.com/shard/s613/sh/fdad75eb-1661-1244-4992-a9da3bbf5c3c/NiF0Ez1YnlYwEpA0yLSniDQJyynS3vXuV2hvqUSFLNc1hir8ShrrMYlmcg
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Features:
+https://www.evernote.com/shard/s613/sh/2fa49c29-c674-a264-a208-8ac4d35d06a0/S6guEtTjV2QAXfl2rrlbf7W8YHRHEqk6bRmFMKgdJ1fJ64_keXwkuIEkXQ
