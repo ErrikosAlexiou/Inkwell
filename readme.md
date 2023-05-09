@@ -1,26 +1,16 @@
-## Inkwell. Your personal time capsule
+# inkwell
 
+A new Flutter project.
 
-Development for the master diary entry application.
+## Getting Started
 
+This project is a starting point for a Flutter application.
 
-Todo List:
-- Fix grid spacing issue
-- work on back end features
+A few resources to get you started if this is your first Flutter project:
 
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-BackEnd features
-- writing and saving of the diary entries
-- tracking days of diaries completed on time
-- amount of diary written
-- time taken to write diaries 
-- average time writing
-- average time writing this month
-- total time writing diaries
-- time writing diaries this month
-- average happiness this month.
-- average happiness overall time.
-
-
-add calendar and with written diary notifications.
-for main page with stats
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
