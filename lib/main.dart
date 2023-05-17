@@ -1,104 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'dart:io' show Platform;
+import 'webLib/webmain.dart';
+import 'winLib/winmain.dart';
+import 'androidLib/androidmain.dart';
+import 'iosLib/ioslib.dart';
 
-/// Flutter code sample for [BottomNavigationBar].
+void main() {
+  runApp(const MyApp());
+}
 
-void main() => runApp(const BottomNavigationBarExampleApp());
-
-class BottomNavigationBarExampleApp extends StatelessWidget {
-  const BottomNavigationBarExampleApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: BottomNavigationBarExample(),
-    );
+    if (kIsWeb) {
+      return const MaterialApp(
+        home: webApp(),
+      );
+    } else if (Platform.isWindows) {
+      return const MaterialApp(
+        home: WindowsApp(),
+      );
+    } else if (Platform.isAndroid) {
+      return const MaterialApp(
+        home: AndroidApp(),
+      );
+      // } else if (Platform.isIOS) {
+      //   return const MaterialApp(
+      //     home: iOSApp(),
+      // ); iOS testing not implimented until i can emulate ios on windows
+    } else {
+      return const MaterialApp(
+        home: notsureApp(),
+      );
+    }
   }
 }
 
-class BottomNavigationBarExample extends StatefulWidget {
-  const BottomNavigationBarExample({super.key});
-
-  @override
-  State<BottomNavigationBarExample> createState() =>
-      _BottomNavigationBarExampleState();
-}
-
-class _BottomNavigationBarExampleState
-    extends State<BottomNavigationBarExample> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
+class notsureApp extends StatelessWidget {
+  const notsureApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
-        leading: const IconButton(
-          icon: Icon(
-            Icons.abc,
-            color: Colors.orange,
-            size: 50,
-          ),
-          onPressed: null,
-        ),
+        title: const Text('Not Sure App'),
       ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        // type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.amber,
-        unselectedItemColor: Colors.blue,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: Colors.red,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-            backgroundColor: Colors.green,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-            backgroundColor: Colors.purple,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-            backgroundColor: Colors.pink,
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
+      body: const Center(
+        child: Text('This is the Not Sure version of the app'),
       ),
     );
   }
